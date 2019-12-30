@@ -1,12 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91e1edfa-3f80-46a1-ad1d-1c51073060ce" name="Default Changelist" comment="" />
+    <list default="true" id="91e1edfa-3f80-46a1-ad1d-1c51073060ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/config/HibernateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/Article.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/ChangePublishing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/EditArticle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/EnterNewArticleByUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/ListArticleById.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/ListArticlesByTitleBrief.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/SeeAllArticlesOfUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/SeeAllPublishedArticlesOfUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/SeeArticlesByUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/ChangePublishingImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/EditArticleImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/EnterNewArticleByUserImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/ListArticleByIdImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/ListArticlesByTitleBriefImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/SeeAllArticlesOfUserImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/SeeAllPublishedArticlesOfUserImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/SeeArticlesByUserImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/categorymanagement/usecase/ListAllCategories.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/categorymanagement/usecase/NewCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/categorymanagement/usecaseimpl/ListAllCategoriesImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/categorymanagement/usecaseimpl/NewCategoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/ChangePassword.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/ListAllUsers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/SignIn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/SignOut.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/SignUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecaseimpl/ChangePasswordImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecaseimpl/ListAllUsersImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecaseimpl/SignInImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecaseimpl/SignOutImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecaseimpl/SignUpImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/share/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW8_articlemanagement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HW8_articlemanagement.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/share/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="homework8@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="homework8@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="homework8@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="homework8: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\asus\IdeaProjects\HW8_articlemanagement\.idea" />
+      </set>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -16,13 +108,21 @@
     </option>
   </component>
   <component name="ProjectId" id="1VcmZM5zBh7H8dwqDTwgRl807O9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="hw8_articlemanagement" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -36,6 +136,44 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ir.maktab.Application" />
+      <module name="HW8_articlemanagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ir.maktab.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="HW8_articlemanagement" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -46,11 +184,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577560813234</updated>
-      <workItem from="1577560820944" duration="123000" />
+      <workItem from="1577560820944" duration="1757000" />
+      <workItem from="1577562670241" duration="10099000" />
+      <workItem from="1577572899063" duration="2509000" />
+      <workItem from="1577575860219" duration="9105000" />
+      <workItem from="1577587375214" duration="7114000" />
+      <workItem from="1577600264443" duration="5111000" />
+      <workItem from="1577630523589" duration="3937000" />
+      <workItem from="1577657901119" duration="3961000" />
+      <workItem from="1577662904231" duration="1011000" />
+      <workItem from="1577664198252" duration="25000" />
+      <workItem from="1577664329048" duration="23000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
