@@ -2,49 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91e1edfa-3f80-46a1-ad1d-1c51073060ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/config/HibernateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/ChangePublishing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/EditArticle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/EnterNewArticleByUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/ListArticleById.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/ListArticlesByTitleBrief.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/SeeAllArticlesOfUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/SeeAllPublishedArticlesOfUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/SeeArticlesByUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/ChangePublishingImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/EditArticleImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/EnterNewArticleByUserImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/ListArticleByIdImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/ListArticlesByTitleBriefImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/SeeAllArticlesOfUserImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/SeeAllPublishedArticlesOfUserImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/SeeArticlesByUserImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/categorymanagement/usecase/ListAllCategories.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/categorymanagement/usecase/NewCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/categorymanagement/usecaseimpl/ListAllCategoriesImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/categorymanagement/usecaseimpl/NewCategoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/ChangePassword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/ListAllUsers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/SignIn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/SignOut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/SignUp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecaseimpl/ChangePasswordImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecaseimpl/ListAllUsersImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecaseimpl/SignInImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecaseimpl/SignOutImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecaseimpl/SignUpImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/share/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/ArticleManagementApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW8_articlemanagement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HW8_articlemanagement.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/share/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/ChangePublishingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/ChangePublishingImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/entities/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/entities/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/features/articlemanagement/usecaseimpl/ChangePublishingImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/features/articlemanagement/usecaseimpl/ChangePublishingImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/HW8_articlemanagement.kotlin_module" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +87,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -136,9 +104,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="Application.ArticleManagementApplication">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ir.maktab.Application" />
+      <module name="HW8_articlemanagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ir.maktab.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArticleManagementApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ir.maktab.ArticleManagementApplication" />
       <module name="HW8_articlemanagement" />
       <extension name="coverage">
         <pattern>
@@ -159,6 +140,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ArticleManagementApplication" />
         <item itemvalue="Application.Application" />
         <item itemvalue="Application.Test" />
       </list>
@@ -168,7 +150,12 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@946a8e08" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -195,6 +182,7 @@
       <workItem from="1577662904231" duration="1011000" />
       <workItem from="1577664198252" duration="25000" />
       <workItem from="1577664329048" duration="23000" />
+      <workItem from="1577664369272" duration="5933000" />
     </task>
     <servers />
   </component>

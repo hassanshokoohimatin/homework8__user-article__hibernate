@@ -43,4 +43,20 @@ public class Article {
 
     @ManyToOne
     private Category category;
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", brief='" + brief + '\'' +
+                ", content='" + content + '\'' +
+                ", createDate='" + createDate + '\'' +
+                ", lastUpdateDate='" + lastUpdateDate + '\'' +
+                ", publishDate='" + publishDate + '\'' +
+                ", isPublished='" + isPublished + '\'' +
+                ", user=" + user.getUsername() +
+                ", category=" + category.getTitle() +
+                '}';
+    }
 }
