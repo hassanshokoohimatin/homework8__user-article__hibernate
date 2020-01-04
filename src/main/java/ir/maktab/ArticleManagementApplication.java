@@ -22,17 +22,17 @@ public class ArticleManagementApplication {
         Scanner scanner = new Scanner(System.in);
         String manner = "";
         while (!manner.equals("exit")) {
-            System.out.println("Welcome...\nSign in\nSign up\nSee Articles\nExit");
-            manner = scanner.nextLine();
+            System.out.println("Welcome...\nSignin\nSignup\nArticles\nExit");
+            manner = scanner.next();
 
-            if (manner.equals("sign in")) {
+            if (manner.equals("signin")) {
 
                 User loginUser = AuthenticationService.getInstance().getLoginUser();
                 if (loginUser == null) {
-                    System.out.print("Enter username : ");
-                    String username = scanner.nextLine();
-                    System.out.print("Enter password : ");
-                    String password = scanner.nextLine();
+                    System.out.println("Enter username : ");
+                    String username = scanner.next();
+                    System.out.println("Enter password : ");
+                    String password = scanner.next();
                     SignIn signIn = new SignInImpl();
                     loginUser = signIn.signIn(username, password);
                     AuthenticationService.getInstance().setLoginUser(loginUser);
@@ -61,21 +61,26 @@ public class ArticleManagementApplication {
                             //EDIT ARTICLE
                             if (choice == 2) {
                                 SeeArticlesByUser seeArticlesByUser = new SeeArticlesByUserImpl();
-                                if (seeArticlesByUser.articleList(loginUser.getId()).size() == 0) {
+                                List<Article> articles = seeArticlesByUser.articleList(loginUser.getId());
+                                if (articles.size() == 0)
                                     System.out.println("You dont have any articles...");
-                                } else {
+                                else
+                                    {
+                                        for (Article a : articles) {
+                                            System.out.println(a);
+                                        }
                                     System.out.println("Enter the id of article you want to edit...");
                                     Long id = scanner.nextLong();
                                     ListArticleById listArticleById = new ListArticleByIdImpl();
                                     Article article = listArticleById.list(id);
-                                    System.out.print("Enter new title : ");
-                                    String title = scanner.nextLine();
+                                    System.out.println("Enter new title : ");
+                                    String title = scanner.next();
                                     article.setTitle(title);
-                                    System.out.print("Enter new brief : ");
-                                    String brief = scanner.nextLine();
+                                    System.out.println("Enter new brief : ");
+                                    String brief = scanner.next();
                                     article.setBrief(brief);
-                                    System.out.print("Enter new content : ");
-                                    String content = scanner.nextLine();
+                                    System.out.println("Enter new content : ");
+                                    String content = scanner.next();
                                     article.setContent(content);
                                     System.out.println("Edit publishing situation...yes or no");
                                     String isPublished = scanner.nextLine();
@@ -115,23 +120,23 @@ public class ArticleManagementApplication {
                                 Article article = new Article();
                                 article.setId(null);
                                 article.setUser(loginUser);
-                                System.out.print("Enter title : ");
-                                String title = scanner.nextLine();
+                                System.out.println("Enter title : ");
+                                String title = scanner.next();
                                 article.setTitle(title);
-                                System.out.print("Enter brief : ");
-                                String brief = scanner.nextLine();
+                                System.out.println("Enter brief : ");
+                                String brief = scanner.next();
                                 article.setBrief(brief);
-                                System.out.print("Enter content : ");
-                                String content = scanner.nextLine();
+                                System.out.println("Enter content : ");
+                                String content = scanner.next();
                                 article.setContent(content);
-                                System.out.print("Enter create date : ");
-                                String createDate = scanner.nextLine();
+                                System.out.println("Enter create date : ");
+                                String createDate = scanner.next();
                                 article.setCreateDate(createDate);
-                                System.out.print("Enter publish date : ");
-                                String publishDate = scanner.nextLine();
+                                System.out.println("Enter publish date : ");
+                                String publishDate = scanner.next();
                                 article.setPublishDate(publishDate);
                                 article.setLastUpdateDate(new Date().toString());
-                                article.setIsPublished(null);
+                                article.setIsPublished("no");
 
                                 ListAllCategories listAllCategories = new ListAllCategoriesImpl();
                                 List<Category> categories = listAllCategories.categoryList();
@@ -165,19 +170,26 @@ public class ArticleManagementApplication {
                             //CHANGE PASSWORD
                             if (choice == 4) {
 
-                                System.out.print("Enter your old password : ");
-                                String oldPassword = scanner.nextLine();
+                                System.out.println("Enter your old password : ");
+                                String oldPassword = scanner.next();
                                 if (loginUser.getPassword().equals(oldPassword)) {
-                                    System.out.print("Enter new password");
-                                    String newPassword = scanner.nextLine();
-                                    loginUser.setPassword(newPassword);
-                                    ChangePassword changePassword = new ChangePasswordImpl();
-                                    changePassword.changePassword(newPassword);
-                                    System.out.println("password changed successfully...");
-                                } else {
+                                    System.out.println("Enter new password");
+                                    String newPassword = scanner.next();
+                                    System.out.println("Reenter the password");
+                                    String reenteredPassword = scanner.next();
+                                    if (newPassword.equals(reenteredPassword)) {
+                                        loginUser.setPassword(newPassword);
+                                        ChangePassword changePassword = new ChangePasswordImpl();
+                                        changePassword.changePassword(newPassword);
+                                        System.out.println("password changed successfully...");
+                                    }
+                                    else{
+                                        System.out.println("Entered passwords are not the same...try again");
+                                    }
+                                }
+                                else {
                                     System.out.println("wrong password...you can not change it");
                                 }
-
                             }
                             //DASHBOARD
                             if (choice == 5) {
@@ -191,10 +203,7 @@ public class ArticleManagementApplication {
 
                                     List<Article> articleList = seeAllArticlesOfUser.articleList(AuthenticationService.getInstance()
                                             .getLoginUser().getId());
-
-                                    for (Article a : articleList) {
-                                        System.out.println(a);
-                                    }
+                                    System.out.printf("%s%d","number of your articles : ",articleList.size());
 
                                 } else if (dashboardChoice == 2) {
 
@@ -203,10 +212,7 @@ public class ArticleManagementApplication {
 
                                     List<Article> articles = seeAllPublishedArticlesOfUser.articleList(AuthenticationService.getInstance()
                                             .getLoginUser().getId());
-
-                                    for (Article a : articles) {
-                                        System.out.println(a);
-                                    }
+                                    System.out.printf("%s%d","number of your published articles : ",articles.size());
                                 }
                             }
 
@@ -214,12 +220,18 @@ public class ArticleManagementApplication {
                             if (choice == 6) {
                                 User user = AuthenticationService.getInstance().getLoginUser();
                                 SeeAllArticlesOfUser seeAllArticlesOfUser = new SeeAllArticlesOfUserImpl();
-                                seeAllArticlesOfUser.articleList(AuthenticationService.getInstance()
+                                List<Article> articles = seeAllArticlesOfUser.articleList(AuthenticationService.getInstance()
                                         .getLoginUser().getId());
-                                System.out.println("Which article do you want to change publishing? Enter the id");
-                                Long articleId = scanner.nextLong();
-                                ChangePublishing changePublishing = new ChangePublishingImpl();
-                                changePublishing.changePublishing(articleId, user);
+                                if (articles.size()!=0) {
+                                    for (Article a : articles) {
+                                        System.out.println(a);
+                                    }
+                                    System.out.println("Which article do you want to change publishing? Enter the id");
+                                    Long articleId = scanner.nextLong();
+                                    ChangePublishing changePublishing = new ChangePublishingImpl();
+                                    changePublishing.changePublishing(articleId, user);
+                                }else
+                                    System.out.println("You dont have any articles");
                             }
                             //SIGN OUT
                             if (choice == 7) {
@@ -237,14 +249,14 @@ public class ArticleManagementApplication {
                 }
             }
 
-            if (manner.equals("sign up")) {
+            if (manner.equals("signup")) {
                 User loginUser = AuthenticationService.getInstance().getLoginUser();
                 if (loginUser == null) {
                     int existUserCount = 0;
-                    System.out.print("Enter username : ");
-                    String username = scanner.nextLine();
-                    System.out.print("Enter national code : ");
-                    String nationalCode = scanner.nextLine();
+                    System.out.println("Enter username : ");
+                    String username = scanner.next();
+                    System.out.println("Enter national code : ");
+                    String nationalCode = scanner.next();
                     ListAllUsers listAllUsers = new ListAllUsersImpl();
                     List<User> userList = listAllUsers.userList();
                     for (User u : userList) {
@@ -254,8 +266,8 @@ public class ArticleManagementApplication {
                         }
                     }
                     if (existUserCount == 0) {
-                        System.out.print("Enter birthday : ");
-                        String birthday = scanner.nextLine();
+                        System.out.println("Enter birthday : ");
+                        String birthday = scanner.next();
                         User user = new User(null, username, nationalCode, birthday, nationalCode, null);
                         SignUp signUp = new SignUpImpl();
                         signUp.signUp(user);
@@ -272,14 +284,14 @@ public class ArticleManagementApplication {
                 }
             }
 
-            if (manner.equals("see articles")) {
+            if (manner.equals("articles")) {
                 ListArticlesByTitleBrief listArticlesByTitleBrief = new ListArticlesByTitleBriefImpl();
                 List<Article> articleList = listArticlesByTitleBrief.articleList();
                 if (articleList.size() == 0) {
                     System.out.println("there is no articles...");
                 } else {
+                    System.out.println("id\t\ttitle\t\tbrief");
                     for (Article a : articleList) {
-                        System.out.println("id\t\ttitle\t\tbrief");
                         System.out.printf("%d\t\t%s\t\t%s\n", a.getId(), a.getTitle(), a.getBrief());
                     }
                     System.out.println("enter the id of the article too see more detail or press 0 to back to main menu");
