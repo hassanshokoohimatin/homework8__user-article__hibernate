@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91e1edfa-3f80-46a1-ad1d-1c51073060ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/SearchArticleByTitle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/SearchByAuthorName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW8_articlemanagement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HW8_articlemanagement.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/ArticleManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/ArticleManagementApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/ArticleManagementApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/ArticleManagementApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/entities/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/entities/Article.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +29,23 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="homework8@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="homework8@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="homework8@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="homework8: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -126,7 +148,12 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@8bc4ea5b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -159,7 +186,10 @@
       <workItem from="1577801253707" duration="4891000" />
       <workItem from="1577817094285" duration="1884000" />
       <workItem from="1577825854489" duration="5419000" />
-      <workItem from="1578145987282" duration="2387000" />
+      <workItem from="1578145987282" duration="2437000" />
+      <workItem from="1578426665642" duration="460000" />
+      <workItem from="1579811816846" duration="2068000" />
+      <workItem from="1579817584907" duration="5510000" />
     </task>
     <servers />
   </component>

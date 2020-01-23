@@ -46,17 +46,14 @@ public class Article {
 
     @Override
     public String toString() {
-        return "Article{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", brief='" + brief + '\'' +
-                ", content='" + content + '\'' +
-                ", createDate='" + createDate + '\'' +
-                ", lastUpdateDate='" + lastUpdateDate + '\'' +
-                ", publishDate='" + publishDate + '\'' +
-                ", isPublished='" + isPublished + '\'' +
-                ", user=" + user.getUsername() +
-                ", category=" + category.getTitle() +
-                '}';
+        return "Article(" + id + "){" +
+                "title= " + title +
+                "---brief= " + brief +
+                "---createDate= " + createDate +
+                "---lastUpdateDate= " + lastUpdateDate +
+                "---isPublished= " + isPublished +
+                "---user ( " + user.getUsername() + " )" +
+                "---category= " + category.getTitle() +
+                "}";
     }
 }

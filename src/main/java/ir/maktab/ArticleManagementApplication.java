@@ -22,7 +22,7 @@ public class ArticleManagementApplication {
         Scanner scanner = new Scanner(System.in);
         String manner = "";
         while (!manner.equals("exit")) {
-            System.out.println("Welcome...\nSignin\nSignup\nArticles\nExit");
+            System.out.println("Welcome...\nSignin\nSignup\nArticles\nsearch\nExit");
             manner = scanner.next();
 
             if (manner.equals("signin")) {
@@ -73,18 +73,22 @@ public class ArticleManagementApplication {
                                     Long id = scanner.nextLong();
                                     ListArticleById listArticleById = new ListArticleByIdImpl();
                                     Article article = listArticleById.list(id);
-                                    System.out.println("Enter new title : ");
+                                    System.out.println("Enter new title or * to skip : ");
                                     String title = scanner.next();
-                                    article.setTitle(title);
-                                    System.out.println("Enter new brief : ");
+                                    if (! title.equals("*"))
+                                        article.setTitle(title);
+                                    System.out.printf("%s","Enter new brief or * to skip : ");
                                     String brief = scanner.next();
-                                    article.setBrief(brief);
-                                    System.out.println("Enter new content : ");
+                                    if (! brief.equals("*"))
+                                        article.setBrief(brief);
+                                    System.out.printf("%s","Enter new content or * to skip : ");
                                     String content = scanner.next();
-                                    article.setContent(content);
-                                    System.out.println("Edit publishing situation...yes or no");
-                                    String isPublished = scanner.nextLine();
-                                    article.setIsPublished(isPublished);
+                                    if (! content.equals("*"))
+                                        article.setContent(content);
+                                    System.out.println("Edit publishing situation...yes or no or * to skip");
+                                    String isPublished = scanner.next();
+                                    if (! isPublished.equals("*"))
+                                        article.setIsPublished(isPublished);
                                     ListAllCategories listAllCategories = new ListAllCategoriesImpl();
                                     List<Category> categories = listAllCategories.categoryList();
                                     System.out.println("id\t\t\ttitle");
@@ -95,10 +99,10 @@ public class ArticleManagementApplication {
                                     int categoryChoice = scanner.nextInt();
                                     if (categoryChoice == 0) {
 
-                                        System.out.print("Enter title : ");
-                                        String categoryTitle = scanner.nextLine();
-                                        System.out.print("Enter description : ");
-                                        String categoryDescription = scanner.nextLine();
+                                        System.out.println("Enter title : ");
+                                        String categoryTitle = scanner.next();
+                                        System.out.println("Enter description : ");
+                                        String categoryDescription = scanner.next();
                                         Category category = new Category(null, categoryTitle, categoryDescription, null);
                                         article.setCategory(category);
                                         NewCategory newCategory = new NewCategoryImpl();
@@ -123,13 +127,13 @@ public class ArticleManagementApplication {
                                 System.out.println("Enter title : ");
                                 String title = scanner.next();
                                 article.setTitle(title);
-                                System.out.println("Enter brief : ");
+                                System.out.printf("%s","Enter brief : ");
                                 String brief = scanner.next();
                                 article.setBrief(brief);
-                                System.out.println("Enter content : ");
+                                System.out.printf("%s","Enter content : ");
                                 String content = scanner.next();
                                 article.setContent(content);
-                                System.out.println("Enter create date : ");
+                                System.out.printf("%s","Enter create date : ");
                                 String createDate = scanner.next();
                                 article.setCreateDate(createDate);
                                 System.out.println("Enter publish date : ");
@@ -148,10 +152,10 @@ public class ArticleManagementApplication {
                                 int categoryChoice = scanner.nextInt();
                                 if (categoryChoice == 0) {
 
-                                    System.out.print("Enter title : ");
-                                    String categoryTitle = scanner.nextLine();
-                                    System.out.print("Enter description : ");
-                                    String categoryDescription = scanner.nextLine();
+                                    System.out.println("Enter title : ");
+                                    String categoryTitle = scanner.next();
+                                    System.out.println("Enter description : ");
+                                    String categoryDescription = scanner.next();
                                     Category category = new Category(null, categoryTitle, categoryDescription, null);
                                     article.setCategory(category);
                                     NewCategory newCategory = new NewCategoryImpl();
@@ -204,6 +208,7 @@ public class ArticleManagementApplication {
                                     List<Article> articleList = seeAllArticlesOfUser.articleList(AuthenticationService.getInstance()
                                             .getLoginUser().getId());
                                     System.out.printf("%s%d","number of your articles : ",articleList.size());
+                                    System.out.println();
 
                                 } else if (dashboardChoice == 2) {
 
@@ -213,6 +218,7 @@ public class ArticleManagementApplication {
                                     List<Article> articles = seeAllPublishedArticlesOfUser.articleList(AuthenticationService.getInstance()
                                             .getLoginUser().getId());
                                     System.out.printf("%s%d","number of your published articles : ",articles.size());
+                                    System.out.println();
                                 }
                             }
 
@@ -230,6 +236,7 @@ public class ArticleManagementApplication {
                                     Long articleId = scanner.nextLong();
                                     ChangePublishing changePublishing = new ChangePublishingImpl();
                                     changePublishing.changePublishing(articleId, user);
+                                    System.out.println();
                                 }else
                                     System.out.println("You dont have any articles");
                             }
@@ -310,6 +317,32 @@ public class ArticleManagementApplication {
 
             if (manner.equals("exit")) {
                 System.out.println("END");
+            }
+            if (manner.equals("search")){
+                System.out.println("1.search by name of author\n2.search by title of article");
+                int choice = scanner.nextInt();
+                if (choice==1){
+                    System.out.println("enter the name of the author to be searched : ");
+                    String name = scanner.next();
+                    List<Article> articles = SearchByAuthorName.articles(name);
+                    if (articles.size()==0)
+                        System.out.println("sorry this user has no articles or maybe this is a wrong username");
+                    else{
+                        for (Article a : articles)
+                            System.out.println(a);
+                    }
+                }
+                if (choice==2){
+                    System.out.println("enter the title of article to be searched : ");
+                    String title = scanner.next();
+                    List<Article> articles = SearchArticleByTitle.articles(title);
+                    if (articles.size()==0)
+                        System.out.println("sorry there is no articles with this title...");
+                    else{
+                        for (Article a : articles)
+                            System.out.println(a);
+                    }
+                }
             }
         }
     }
