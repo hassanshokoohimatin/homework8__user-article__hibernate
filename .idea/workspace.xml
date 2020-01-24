@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91e1edfa-3f80-46a1-ad1d-1c51073060ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/SearchArticleByTitle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecaseimpl/SearchByAuthorName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW8_articlemanagement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HW8_articlemanagement.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/ArticleManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/ArticleManagementApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/ArticleManagementApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/ArticleManagementApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/entities/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/entities/Article.class" afterDir="false" />
-    </list>
+    <list default="true" id="91e1edfa-3f80-46a1-ad1d-1c51073060ce" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,8 +179,16 @@
       <workItem from="1578145987282" duration="2437000" />
       <workItem from="1578426665642" duration="460000" />
       <workItem from="1579811816846" duration="2068000" />
-      <workItem from="1579817584907" duration="5510000" />
+      <workItem from="1579817584907" duration="5651000" />
     </task>
+    <task id="LOCAL-00001" summary="final commit">
+      <created>1579823295602</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579823295602</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,5 +206,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="final commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="final commit" />
   </component>
 </project>
